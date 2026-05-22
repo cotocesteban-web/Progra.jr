@@ -1,0 +1,126 @@
+/* Diseño limpio con tipografía estándar del sistema */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #fafafa;
+    color: #0fdb61;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.contenedor {
+    background-color: #ffffff;
+    padding: 30px;
+    border: 1px solid #a73131;
+    border-radius: 4px;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1, h2 {
+    color: #1008f0;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+p {
+    color: #666666;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #333333;
+}
+
+/* Inputs sencillos con bordes delgados */
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: #0066cc;
+}
+
+/* Botón plano y formal */
+button {
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+button:hover {
+    background-color: #0052a3;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+th {
+    background-color: #f5f5f5;
+    color: #333333;
+    font-weight: 600;
+    padding: 10px;
+    border-bottom: 2px solid #dddddd;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #eeeeee;
+    color: #444444;
+}
+
+/* Enlaces inferiores discretos */
+.enlaces-retorno {
+    margin-top: 24px;
+    text-align: left;
+}
+
+.btn-enlace, .enlace-admin {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.btn-enlace:hover, .enlace-admin:hover {
+    text-decoration: underline;
+}

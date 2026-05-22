@@ -1,0 +1,259 @@
+# Preparación del Entorno (Instalación de Node.js)
+**Manual de Instalación Guiada:**
+1. Vayan a la página oficial: `nodejs.org`.
+2. Descarguen la versión que dice **LTS** (Long Term Support).
+3. Ejecuten el instalador. Sigan los pasos predeterminados (Siguiente, Siguiente). Asegúrense de dejar marcada la opción que dice "Add to PATH" (Agregar a las variables de entorno).
+4. **Verificación:** Abran su terminal
+   1. `node -v`
+
+## nuestro primer programa (hola mundo en JS)
+En Python, para imprimir en la consola usábamos `print()`. En JavaScript, utilizamos un objeto llamado `console` y su método `log()`
+
+## Variables
+Tenemos dos formas de crear uina variable
+- **`let` (Variables mutables):**
+- **`const` (Constantes):**
+- evitemos usar `var`
+
+```javascript
+let edad = 30
+edad = 40 // válido, porque `let`, el cual permite cambio 
+console.log(edad)
+
+const impuesto = 013
+// impuesto = 0.15 // ERROR!!!! las const no se cambian
+
+```
+
+Convención: **camelCase**
+  
+ - totalPrecio
+ - userName
+
+Tipos primitivos: `number`, `string`, `boolean`, `null`, `undefined`, `bigint`, `symbol`; y estructurados como `object` y `function`.
+
+```js
+const curso = "Programación avanzada";
+let inscritos = 15;
+inscritos = inscritos + 1;
+
+const precio = 19.99;       // number
+const nombre = "Diego"      // string
+const activo = true;        // booblean
+const nada = null;          // null
+let indefinido;             //undefined
+
+
+console.log(typeof precio)
+```
+
+### Ejercicio de práctica 
+Declare una constante `PI` con el valor `3.14159` y una variable `radio` con el valor `7`. Calcule y guarde en `area` el área de un círculo (`PI * radio * radio`).  
+Verifique con `console.log(area)`.
+
+## Operadores: Aritméticos, comparación y lógicos
+* **Aritméticos:** `+`, `-`, `*`, `/`, `%`, `**`
+* **Comparación:** `===`, `!==`, `>`, `>=`, `<`, `<=` (evitar `==` y `!=`).  
+* **Lógicos:** `&&` (AND), `||` (OR), `!` (NOT).
+
+```js
+const num1 = 10
+const num2 = 3
+console.log(num1 + num2)
+console.log(num1 - num2)
+console.log(num1 * num2)
+console.log(num1 / num2)
+console.log(num1 % num2)
+console.log(num1 ** num2)
+
+console.log(5 == "5")   // true
+console.log(5 === "5")  // false
+
+
+```
+
+### Ejercicio 
+Calcule si un número `numero` es **par** y **mayor que 10** a la vez. Guarde el resultado booleano en `esValido` y muéstrelo con `console.log`.
+
+## Condicionales
+* `if / else if / else`
+* `switch (valor) {case ... }`
+* operador ternario: `cond ? exprTrue : exprFalse`
+
+Use `if/else` para lógica general y `switch` para múltiples casos de un mismo valor.
+
+- `if`
+```js 
+const nota = 83
+
+let letra
+
+if (nota >= 90) {
+    letra = "A"
+}
+else if (nota >= 80) {
+    letra = "B"
+}
+else if (nota >= 70) {
+    letra = "C"
+}
+else {
+    letra = "D"
+}
+console.log(letra)
+```
+
+-`switch`
+```js
+const dia = martes
+switch(dia){
+    case "lunes":
+        console.log("Clase teórica")
+        break 
+    case "martes":
+        console.log("Clase con quiz")
+        break 
+    case "viernes":
+        console.log("Clase con laboratorio")
+        break
+    default:
+        console.log("Día libre")
+
+}
+```
+
+- `operador ternario`
+```js
+const edad = 18
+const esAdulto = (edad >= 18) ? "Sí, es mayor" : "No, no es mayor"
+
+console.log(esAdulto)
+```
+
+### Ejercicio: 
+Con una variable `temperatura`, imprima: "Frío" si es menor a 15, "Templado" si está entre 15 y 25 (incluidos), y "Caliente" si es mayor de 25.
+
+
+## Ciclos
+- `for (inicialización; condición; actualización) { ... }`
+- `while (condición) { ... }`
+- `do { ... } while (condición)`
+
+
+- `ciclo for`
+```js
+let suma = 0
+for (let index = 1; index <= 5; index++) {
+    suma += index
+}
+console.log(suma)
+```
+
+- `ciclo while`
+```js
+let energia = 3
+
+while (energia > 0) {
+    console.log("Saltando... Energía restante: " + energia);
+    energia--;
+}
+```
+
+- `ciclo do...while`: Hazlo al menos una vez 
+```js
+const passCorrecta = "1234"
+let passIngresada = ""
+
+do 
+{
+    passIngresada = "1234" // simular que el usuario ingresa la clave
+    console.log("Validando contraseña...")
+} while (passIngresada !== passCorrecta);
+
+console.log("Acceso concedido")
+```
+
+- `for...of` sobre un array
+```js
+const frutas = ["Manzanas", "Pera", "Uvas"]
+for ( const fruta of frutas) {
+    console.log(fruta)
+}
+```
+
+### Ejercicio
+Dado un array `nums = [2, 5, 7, 10, 11]`, calcule la suma de los números **pares** usando un ciclo y muestre el resultado.
+
+
+## Subrutinas (funciones)
+- **Declaración:** `function nombre(params) { ... }`
+- **Expresión:** `const nombre = function(params) { ... }`
+- **Flecha:** `const nombre = (params) => { ... }`. callbacks
+- **Parámetros por defecto:** `function f(a = 0) { ... }`
+- **Retorno:** `return valor;`
+
+```js
+// declaraciones tradicionales
+function alCuadrado(num) {
+    return num * num
+}
+
+// funcion flecha 
+const esPar = (num) => { 
+    num % 2 === 0 
+    }
+
+
+// funcion con parámetros por defecto
+function saludar(nombre = "Estudiante") {
+    return 'hola ${nombre}!'
+}
+```
+
+### ejercicio 
+Escriba una función `maximo(a, b, c)` que devuelva el mayor de tres números. Pruebe la función con al menos dos conjuntos de valores.
+
+
+## Arreglos y matrices
+```js 
+const array = [1,2,3]
+// matriz 2x3
+const matriz = [
+    [1,2,3],
+    [9,8,7]
+]
+
+console.log(matriz[1][2])
+
+```
+
+## JSON - JavaScript Object Notation
+### Reglas
+  1. **Las Claves (Keys):** Deben ser obligatoriamente cadenas de texto encerradas en **comillas dobles** (`" "`). Las comillas simples (`' '`) están prohibidas.
+  2. **Los Valores Booleanos:** En Python usamos mayúsculas (`True`, `False`). En JSON se escriben estrictamente en minúscula (`true`, `false`).
+  3. **La Ausencia de Valor:** En Python decimos `None`. En JSON se dice `null`.
+
+#### Diccionario en python
+```python
+diccionario_python = {
+    "nombre": "Ana",
+    "edad": 28,
+    "activo": True,        # Mayúscula en Python
+    "habilidades": ["Python", "SQL"],
+    "vehiculo": None       # None en Python
+}
+```
+
+#### traducción a json 
+```json
+{
+    "nombre": "Ana",
+    "edad": 28,
+    "activo": true,
+    "habilidades": [
+        "Python",
+        "SQL"
+    ],
+    "vehiculo": null
+}
+```
