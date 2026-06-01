@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador Web de Actividades y Contenido Dinámico</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: #9e9292ff;
+            margin: 20px;
+        }
+        .caja-formulario {
+            border: 5px solid #361515; 
+            padding: 50px; 
+            margin: 0 auto; 
+            max-width: 400px;
+            border-radius: 20px;
+        }
+        h1 {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .caja-input {
+            margin-bottom: 15px; 
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px; 
+            border: 1px solid #040410; 
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #070528; 
+            color: #edeaea;
+            border: 1px solid #030202;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="caja-formulario">
+        <h1>Generador de Actividades</h1>
+        
+        <form action="/actividades/procesar" method="POST">
+            <div class="caja-input">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="caja-input">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+
+            <button type="submit">Generar Contenido</button>
+        </form>
+    </div>
+
+</body>
+</html>
