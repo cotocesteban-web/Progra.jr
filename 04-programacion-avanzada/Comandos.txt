@@ -1,0 +1,9 @@
+para empezar un servidor 
+comandos:
+npm init -y
+npm install express
+npm insatll nodemon
+npm install nodemon --save-dev
+npm install mysql2
+
+"cambiar el package json: en el script: "dev": "nodemon server.js"

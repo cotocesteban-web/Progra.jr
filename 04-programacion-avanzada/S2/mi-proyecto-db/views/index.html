@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción - EcoEventos</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Seminario de Ecología Urbana</h1>
+        <p>Por favor, introduzca sus datos para asegurar su participación.</p>
+        
+        <form action="/confirmar" method="POST">
+            <div class="campo">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+            </div>
+            
+            <div class="campo">
+                <label for="correo">Dirección de Correo:</label>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+            </div>
+            
+            <button type="submit">Enviar Registro</button>
+        </form>
+        
+        <div class="enlaces-retorno">
+            <a href="/asistencias" class="enlace-admin">Panel de Administración</a>
+        </div>
+    </div>
+</body>
+</html>

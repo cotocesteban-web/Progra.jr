@@ -6,8 +6,11 @@
   "scripts": {
     "start": "npm install --prefix backend && npm start --prefix backend",
     "dev": "npm install --prefix backend && npm run dev --prefix backend"
+<<<<<<< HEAD
   },
   "dependencies": {
     "jsonwebtoken": "^9.0.3"
+=======
+>>>>>>> 53713bbea2d24cb44b54275b3f796108a3ce66ce
   }
 }

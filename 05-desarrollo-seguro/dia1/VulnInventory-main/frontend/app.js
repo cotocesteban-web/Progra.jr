@@ -248,7 +248,11 @@ async function eliminarArticulo(id) {
   try {
     const res = await fetch(`${API_URL}/inventory/${id}`, {
       method: 'DELETE',
+<<<<<<< HEAD
       headers: { 'Authorization': { 'Authorization': `Bearer ${state.token}` }
+=======
+      headers: { 'Authorization': state.token }
+>>>>>>> 53713bbea2d24cb44b54275b3f796108a3ce66ce
     });
     const data = await res.json();
     alert(data.message);

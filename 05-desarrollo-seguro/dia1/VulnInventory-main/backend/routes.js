@@ -28,6 +28,7 @@ try {
     return res.status(401).json({ error: 'Credenciales inválidas' });
   }
   // ... (el resto de tu lógica de login con el token)
+
     const user = users[0];
     
     // Simplificacion extrema: El "token" es simplemente el ID del usuario en texto plano

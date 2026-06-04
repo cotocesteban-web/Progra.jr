@@ -3,11 +3,19 @@ require('dotenv').config();
 
 // Create the connection pool to MySQL
 const pool = mysql.createPool({
+<<<<<<< HEAD
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
   port: process.env.DB_PORT || 3307,
+=======
+  host: process.env.DB_HOST || 'localhost',
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD || 'root1234',
+  database: process.env.DB_NAME || 'aprendiendo_sql',
+  port: process.env.DB_PORT || 3306,
+>>>>>>> 53713bbea2d24cb44b54275b3f796108a3ce66ce
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
@@ -45,12 +53,21 @@ const initializeDatabase = async () => {
   const fs = require('fs');
   const path = require('path');
   
+<<<<<<< HEAD
   const dbName = process.env.DB_NAME;
   const connectionConfig = {
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     port: process.env.DB_PORT || 3307
+=======
+  const dbName = process.env.DB_NAME || 'aprendiendo_sql';
+  const connectionConfig = {
+    host: process.env.DB_HOST || 'localhost',
+    user: process.env.DB_USER || 'root',
+    password: process.env.DB_PASSWORD || 'root1234',
+    port: process.env.DB_PORT || 3306
+>>>>>>> 53713bbea2d24cb44b54275b3f796108a3ce66ce
   };
 
   return new Promise((resolve, reject) => {

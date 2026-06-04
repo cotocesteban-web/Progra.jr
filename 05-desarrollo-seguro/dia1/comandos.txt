@@ -1,0 +1,9 @@
+comandos
+npm inint-y
+npm install espress
+npm install espress jsonwebtoken dotenv
+npm install nodemon --save-dev
+npm run dev
+
+repositorio
+https://github.com/DiegoOrozco/VulnInventory.git

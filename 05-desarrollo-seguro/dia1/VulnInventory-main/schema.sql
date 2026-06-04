@@ -25,8 +25,23 @@ CREATE TABLE inventory (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
+<<<<<<< HEAD
 
 
+=======
+-- Seed data for testing SQL Injection, XSS, and IDOR
+-- Passwords: 
+-- admin -> admin123
+-- diego -> diego777
+-- maria -> secretpass
+INSERT INTO users (username, password, role) VALUES
+('admin', 'admin123', 'admin'),
+('diego', 'diego777', 'user'),
+('maria', 'secretpass', 'user');
+
+-- Seed inventory items
+-- Admin items, Diego's items, Maria's items
+>>>>>>> 53713bbea2d24cb44b54275b3f796108a3ce66ce
 INSERT INTO inventory (name, description, quantity, price, user_id) VALUES
 ('Laptop HP ProBook', 'Procesador Intel i5, 16GB RAM, 512GB SSD. Asignada a soporte.', 5, 850.00, 1),
 ('Monitor Dell 27"', 'Monitor ultra-wide de 27 pulgadas, resolución 2K.', 10, 320.00, 1),
