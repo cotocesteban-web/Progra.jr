@@ -1,0 +1,16 @@
+{
+  "name": "s1d3-server_express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server_express.js",
+  "scripts": {
+    "test": "nodemon server_express.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14"
+  }
+}
